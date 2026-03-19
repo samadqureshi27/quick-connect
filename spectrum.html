@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum Services - Reliable Internet, TV & Phone | Quick Connect</title>
+    <meta name="description" content="Get high-speed internet, premium TV channels, and reliable phone service with Spectrum. Flexible plans to fit your needs and budget.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="spectrum.css" as="style">
+    <link rel="stylesheet" href="spectrum.css">
+    <link rel="preload" href="spectrum.js" as="script">
+    <script>
+        // Prevent flash: dark mode is default
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t === 'light') {
+                // only remove dark if user explicitly chose light
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Floating Particles Background -->
+    <canvas id="particles" class="particles-canvas"></canvas>
+
+    <!-- ==================== STICKY CALL BANNER ==================== -->
+    <div class="call-banner" id="callBanner">
+        <div class="container">
+            <div class="banner-pulse"></div>
+            <p>Call Us 24/7 For Best Spectrum Deals</p>
+            <a href="tel:+18333226626">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                (833) 322-6626
+            </a>
+
+        </div>
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-info">
+                    <a href="tel:+18333226626">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call Us 24/7: (833) 322-6626
+                    </a>
+                    <a href="mailto:info@quickconnectus.us">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        info@quickconnectus.us
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    Quick<span>Connect</span>
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="#internet-plans">Internet</a>
+                    <a href="#bundles">Home Phone</a>
+                    <a href="#tv-plans">TV Plans</a>
+                    <a href="#why-spectrum">About Us</a>
+                </div>
+
+                <div class="nav-right">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    </button>
+                    <a href="tel:+18333226626" class="nav-cta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>Call Now</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Authorized Retailer
+                </div>
+                <h1 class="reveal-text">Spectrum Services — <span class="highlight">Reliable Internet, TV & Phone</span></h1>
+                <p class="hero-subtitle">Get high-speed internet, premium TV channels, and reliable phone service with Spectrum. We offer flexible plans to fit your needs and budget.</p>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        High-Speed Internet
+                    </div>
+                    <div class="hero-feature">
+                        <div class="check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        Premium TV
+                    </div>
+                    <div class="hero-feature">
+                        <div class="check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        Home Phone
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="tel:+18333226626" class="btn btn-primary magnetic">
+                        <span class="btn-shine"></span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call Now
+                    </a>
+                    <a href="#internet-plans" class="btn btn-glass">
+                        View Plans
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card glass-card fade-in">
+                    <div class="hero-card-border"></div>
+                    <div class="spectrum-logo-text">SPECTRUM</div>
+                    <p>Call to Pay Your Bill Now</p>
+                    <div class="phone-display">
+                        <a href="tel:+18333226626">+1 (833) 322-6626</a>
+                    </div>
+                    <a href="tel:+18333226626" class="btn btn-gold magnetic">
+                        <span class="btn-shine"></span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call & Save Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STATS BAR ==================== -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1">0</span><span class="stat-suffix">Gbps</span>
+                    <span class="stat-label">Max Speed</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="200">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">TV Channels</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="30">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Bundle Savings</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTERNET PLANS ==================== -->
+    <section class="section" id="internet-plans">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Internet Plans</div>
+                <h2>Blazing-Fast Internet for Every Need</h2>
+                <p>Choose the perfect Spectrum internet plan with no data caps, free WiFi router, and 24/7 support included.</p>
+            </div>
+            <div class="plans-grid">
+                <!-- Plan 1 -->
+                <div class="plan-card fade-in fade-in-delay-1">
+                    <div class="plan-card-bg"></div>
+                    <div class="plan-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    </div>
+                    <h3 class="plan-name">Spectrum Internet</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">49</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-desc">Great for browsing, email, and light streaming</p>
+                    <ul class="plan-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Up to 300 Mbps
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Free WiFi router
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            No data caps
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            24/7 support
+                        </li>
+                    </ul>
+                    <a href="tel:+18333226626" class="btn btn-outline magnetic">Call Now</a>
+                </div>
+
+                <!-- Plan 2 (Featured) -->
+                <div class="plan-card featured fade-in fade-in-delay-2">
+                    <div class="plan-card-bg"></div>
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3 class="plan-name">Spectrum Internet Ultra</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">69</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-desc">Ideal for streaming, gaming, and multiple devices</p>
+                    <ul class="plan-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Up to 500 Mbps
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Free WiFi router
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            No data caps
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Priority support
+                        </li>
+                    </ul>
+                    <a href="tel:+18333226626" class="btn btn-primary magnetic"><span class="btn-shine"></span>Call Now</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="plan-card fade-in fade-in-delay-3">
+                    <div class="plan-card-bg"></div>
+                    <div class="plan-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3 class="plan-name">Spectrum Internet Gig</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">89</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-desc">Maximum speed for power users and large households</p>
+                    <ul class="plan-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Up to 1 Gbps
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Free WiFi router
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            No data caps
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Premium support
+                        </li>
+                    </ul>
+                    <a href="tel:+18333226626" class="btn btn-outline magnetic">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TV PLANS ==================== -->
+    <section class="section section-dark" id="tv-plans">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">TV Plans</div>
+                <h2>Premium Entertainment at Your Fingertips</h2>
+                <p>Enjoy hundreds of channels, HD content, and on-demand entertainment with Spectrum TV packages.</p>
+            </div>
+            <div class="plans-grid dark-cards">
+                <!-- TV Plan 1 -->
+                <div class="plan-card fade-in fade-in-delay-1">
+                    <div class="plan-card-bg"></div>
+                    <div class="plan-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                    </div>
+                    <h3 class="plan-name">Spectrum TV Select</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">44</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-desc">Essential entertainment for the whole family</p>
+                    <ul class="plan-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            125+ channels
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            HD included
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            On-demand content
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Spectrum TV app
+                        </li>
+                    </ul>
+                    <a href="tel:+18333226626" class="btn btn-outline magnetic">Call Now</a>
+                </div>
+
+                <!-- TV Plan 2 (Featured) -->
+                <div class="plan-card featured fade-in fade-in-delay-2">
+                    <div class="plan-card-bg"></div>
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3 class="plan-name">Spectrum TV Silver</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">69</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-desc">More channels plus premium content</p>
+                    <ul class="plan-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            175+ channels
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Premium channels
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            HD included
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Spectrum TV app
+                        </li>
+                    </ul>
+                    <a href="tel:+18333226626" class="btn btn-primary magnetic"><span class="btn-shine"></span>Call Now</a>
+                </div>
+
+                <!-- TV Plan 3 -->
+                <div class="plan-card fade-in fade-in-delay-3">
+                    <div class="plan-card-bg"></div>
+                    <div class="plan-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    </div>
+                    <h3 class="plan-name">Spectrum TV Gold</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">89</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-desc">The ultimate entertainment experience</p>
+                    <ul class="plan-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            200+ channels
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Premium movie channels
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            HD included
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Spectrum TV app
+                        </li>
+                    </ul>
+                    <a href="tel:+18333226626" class="btn btn-outline magnetic">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BUNDLE SECTION ==================== -->
+    <section class="section bundle-section" id="bundles">
+        <div class="container">
+            <div class="bundle-grid">
+                <div class="bundle-content fade-in">
+                    <div class="section-label" style="justify-content:flex-start">Bundle Deals</div>
+                    <h2>Bundle and Save with Spectrum</h2>
+                    <p>Get the best value by bundling your internet, TV, and phone services. Save up to 30% on your monthly bill when you combine Spectrum services.</p>
+                    <div class="bundle-benefits">
+                        <div class="bundle-benefit">
+                            <div class="bundle-benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <div class="bundle-benefit-text">
+                                <h4>Save up to 30% on monthly bills</h4>
+                                <p>Significant savings when you combine services</p>
+                            </div>
+                        </div>
+                        <div class="bundle-benefit">
+                            <div class="bundle-benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </div>
+                            <div class="bundle-benefit-text">
+                                <h4>One bill for all services</h4>
+                                <p>Simple, consolidated billing each month</p>
+                            </div>
+                        </div>
+                        <div class="bundle-benefit">
+                            <div class="bundle-benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div class="bundle-benefit-text">
+                                <h4>Priority customer support</h4>
+                                <p>Get faster help when you need it most</p>
+                            </div>
+                        </div>
+                        <div class="bundle-benefit">
+                            <div class="bundle-benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div class="bundle-benefit-text">
+                                <h4>Free installation</h4>
+                                <p>Professional setup at no extra cost</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bundle-visual fade-in fade-in-delay-2">
+                    <div class="bundle-visual-glow"></div>
+                    <h3>Bundle & Save</h3>
+                    <div class="save-badge">Up to 30% OFF</div>
+                    <p>Internet + TV + Phone — all in one simple package with one easy monthly payment.</p>
+                    <a href="tel:+18333226626" class="btn btn-gold magnetic">
+                        <span class="btn-shine"></span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call for Bundle Deals
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE SPECTRUM ==================== -->
+    <section class="section section-dark" id="why-spectrum">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why Choose Us</div>
+                <h2>Why Choose Spectrum?</h2>
+                <p>Experience the difference with industry-leading technology, unmatched reliability, and dedicated support.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in fade-in-delay-1">
+                    <div class="feature-card-border"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3>Fast Speeds</h3>
+                    <p>Enjoy blazing-fast internet speeds up to 1 Gbps for seamless streaming and gaming.</p>
+                </div>
+                <div class="feature-card fade-in fade-in-delay-2">
+                    <div class="feature-card-border"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Reliable Network</h3>
+                    <p>Count on Spectrum's robust network infrastructure for consistent, reliable service.</p>
+                </div>
+                <div class="feature-card fade-in fade-in-delay-3">
+                    <div class="feature-card-border"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Get help whenever you need it with our round-the-clock customer support team.</p>
+                </div>
+                <div class="feature-card fade-in fade-in-delay-4">
+                    <div class="feature-card-border"></div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    </div>
+                    <h3>Mobile App</h3>
+                    <p>Manage your account and services on the go with the Spectrum mobile app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box fade-in">
+                <div class="cta-orbs">
+                    <div class="cta-orb cta-orb-1"></div>
+                    <div class="cta-orb cta-orb-2"></div>
+                    <div class="cta-orb cta-orb-3"></div>
+                </div>
+                <h2>Ready to Get Spectrum Services?</h2>
+                <p>Call us now to find the perfect Spectrum plan for your home</p>
+                <a href="tel:+18333226626" class="btn btn-primary magnetic">
+                    <span class="btn-shine"></span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call +1 (833) 322-6626
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AUTHORIZED RETAILER BANNER ==================== -->
+    <div class="retailer-banner">
+        <div class="container">
+            <div class="banner-pulse"></div>
+            <p>We are an authorized retailer of <strong>Optimum</strong>, <strong>Direct TV</strong> and <strong>Spectrum</strong></p>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="margin-bottom:16px">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        Quick<span>Connect</span>
+                    </a>
+                    <p>Shorter LLC.</p>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>2521 Shorter Ave, Rome, GA, 30165</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+18333226626">+1 (833) 322-6626</a>
+                    </div>
+
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#why-spectrum">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Disclaimer</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms And Condition</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#internet-plans">Internet</a>
+                    <a href="#bundles">Home Phone</a>
+                    <a href="#">Verizon</a>
+                    <a href="#">Spectrum</a>
+                    <a href="#">Optimum</a>
+                </div>
+
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>Disclaimer: This is the official site of Shorter LLC. Information provided on this site is for informational purposes only. It does not constitute a commitment to provide services. Prices, plans, and availability are subject to change without notice. All logos, trademarks, and images are the property of their respective owners and are used for identification purposes only. Use of these logos, trademarks, and images does not imply endorsement. All content on this website, including text, graphics, logos, and images, is the property of Shorter LLC and is protected by applicable copyright laws.</p>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>&copy; 2025 Shorter LLC | All Rights Reserved</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <script src="spectrum.js"></script>
+</body>
+</html>
